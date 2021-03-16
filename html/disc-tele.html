@@ -3,13 +3,13 @@
 <html>
 	<head>
 		<meta charset="UTF-8"></meta>
-		<title>NarutoDroch</title>
+		<title>DemotionsBot</title>
 		<link href="../css/style.css" rel="stylesheet" type="text/css"></link>
 		<link href="../img/icon/icon.ico" rel="icon" type="image/x-icon"></link>
 	</head>
 
 	<body>
-	
+		<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 		<div class="alldiv">
 			<div class="navig">Способы связи с разработчиком сайта/бота.</div>
 			<div class="menu">
@@ -22,20 +22,60 @@
 			</div>
 			<div class="none"></div>
 			<div class="msg">
-				<div class="spoiler_say_me">
-					<div class="spoiler_say_me_item">
-						<input class="spoiler_say_me_item_input" type="checkbox" id="spoiler_say_me_checkbox">
-						<label  class="spoiler_say_me_trigger" for="spoiler_say_me_checkbox">Discord</label>
-						<div class="spoiler_say_me_content">;P#4456, wolk#4660</div>
+				<div class="spoiler">
+					<div class="spoilerDs">
+						<p><a class="spoilerDsShow">Discord[Click] <a class="spoilerDsCont">БрАвЛ СеРёЖа#4660</a></a></p>
 					</div>
-					<div class="spoiler_say_me_item2">
-						<input class="spoiler_say_me_item_input2" type="checkbox" id="spoiler_say_me_checkbox2">
-						<label  class="spoiler_say_me_trigger2" for="spoiler_say_me_checkbox2">Telegram</label>
-						<div class="spoiler_say_me_content2">@Keraj_serj</div>						
-					</div>
+					<div class="spoilerTg">
+						<p><a class="spoilerTgShow">Telegram[Click] <a class="spoilerTgCont">@Keraj_serj</a></a></p>
+					</div>			
 				</div>
 				<p class="msg_text_p1" align="middle">Пишите, обращайтесь, обсудим ваши жалобы/идеи.</p>
 			</div>
 		<div>
+		<script type="text/javascript">
+			$(".spoilerDsCont").hide();
+			var openDs = "false";
+			$(".spoilerTgCont").hide();
+			var openTg = "false";
+
+			// $(".spoilerDsOpen").click(function spoilerDsContOpen(event){
+			// 	if(openDs === "false"){
+			// 		$(".spoilerDsCont").slideDown(500);
+			// 		openDs = "true";
+			// 	}else if(openDs === "true"){
+			// 		$(".spoilerDsCont").slideUp(500);
+			// 		openDs = "false";
+			// 	};
+			// });
+
+			// $(".spoilerTgOpen").click(function spoilerTgContOpen(event){
+			// 	if(openTg === "false"){
+			// 		$(".spoilerTgCont").slideDown(500);
+			// 		openTg = "true";
+			// 	}else if(openTg === "true"){
+			// 		$(".spoilerTgCont").slideUp(500);
+			// 		openTg = "false";
+			// 	};
+			// });
+
+			$(".spoilerDsShow").click(function spoilerDsContOpen(event){
+				if(openDs === "false"){
+					$(".spoilerDsCont").fadeIn(500);
+					openDs = "true";
+				}else if(openDs === "true"){
+					$(".spoilerDsCont").fadeOut(500);
+					openDs = "false";
+				}});
+
+			$(".spoilerTgShow").click(function spoilerTgContOpen(event){
+				if(openTg === "false"){
+					$(".spoilerTgCont").fadeIn(500);
+					openTg = "true";
+				}else if(openTg === "true"){
+					$(".spoilerTgCont").fadeOut(500);
+					openTg = "false";
+				}});
+		</script>
 	</body>
 </html>
